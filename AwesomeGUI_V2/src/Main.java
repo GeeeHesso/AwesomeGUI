@@ -11,6 +11,8 @@ import java.nio.file.Paths;
 
 import java.nio.file.Files;
 import java.nio.file.StandardCopyOption;
+import java.util.Calendar;
+import java.util.concurrent.TimeUnit;
 
 public class Main {
     private JPanel panel_T;
@@ -46,12 +48,18 @@ public class Main {
     private String[] subjectFolder = {"_","In_the_News","Presentations","Papers"};
     private String[] axisFolder = {"_","smartgrid","energy_transition","network_stability","network_robustness"};
 
-    private String[] yearString = {"---Choose year", "2015", "2016", "2017", "2018", "2019", "2020"};
+    private static int current_year = Calendar.getInstance().get(Calendar.YEAR);
+
+    private static String[] yearString;
+//    private String[] yearString = {"---Choose year", "2015", "2016", "2017", "2018", "2019", "2020"};
+
     private String[] subjectString ={"--Choose subject","In the News","Presentations","Papers"};
     private String[] axisString = {"--Choose axis","Smartgrid","Energy Transition","Network Stability","Network Robustness"};
 
     private String folderName;
     boolean b_folderName = false;
+
+    private String link2folder;
 
 
     public Main() {
@@ -61,6 +69,16 @@ public class Main {
     }
 
     public static void main(String[] args) {
+//        System.out.println(current_year);
+
+        yearString = new String[current_year-2015+3];
+
+        yearString[0]="--Choose year";
+
+        for(int i = 0; i< current_year-2015+2 ; i++){
+//            System.out.println(2015+i);
+            yearString[i+1] = Integer.toString(2015+i);
+        }
 
         JFrame frame = new JFrame("AwesomeGUI");
 
@@ -109,8 +127,10 @@ public class Main {
         checkBox_link.addActionListener(new LinkCBListener());
 
 
-        textRef.setText("*  [<--Authors-->, *<--Title-->*, <--others-->]");
-        textAbtract.setText("# <--Title--> \n Dated : <--date--> \n <--Abstract text--> \n **Author :** <--Authors<sup>1</sup>--> \n 1) <--Author's institute--> \n Also available online there : [Arxiv.org](<--Links to the archive-->) \n ");
+        textRef.setText("Choose Subject First");
+        textRef.setEnabled(false);
+        checkBox_reference.setEnabled(false);
+        textAbtract.setText("# Title \n\nDated : date \n\nAbstract text \n\n**Authors :** Author<sup>1</sup> \n\n1) Author's institute \n\nAlso available online there : [Arxiv.org](Links to the archive) \n\n");
     }
 
     private static void copyFileUsingJava7Files(File source, File dest) throws IOException {
@@ -158,10 +178,23 @@ public class Main {
     private class SubjectSpinListener implements ActionListener{
         @Override
         public void actionPerformed(ActionEvent e) {
-            if(subjectSpin.getSelectedIndex()!=0)
-                b_subject=true;
-            else
-                b_subject=false;
+            if(subjectSpin.getSelectedIndex()!=0) {
+                b_subject = true;
+                textRef.setEnabled(true);
+                checkBox_reference.setEnabled(true);
+                if(subjectSpin.getSelectedIndex()==1) // In the News
+                    textRef.setText("[Title, *publisher*]");
+                if(subjectSpin.getSelectedIndex()==2) // Presentations
+                    textRef.setText("[Title, *place of the presentation*]");
+                if(subjectSpin.getSelectedIndex()==3) // Papers
+                    textRef.setText("[Author(s), *Title*, publisher(optional)]");
+            }
+            else {
+                b_subject = false;
+                textRef.setText("Choose Subject");
+                textRef.setEnabled(false);
+                checkBox_reference.setEnabled(false);
+            }
         }
     }
 
@@ -287,6 +320,7 @@ public class Main {
                 folderName = filename.split("[.]")[0];
                 new File(yearString[yearSpin.getSelectedIndex()]+File.separator+subjectFolder[subjectSpin.getSelectedIndex()]+File.separator+ folderName +File.separator).mkdirs();
                 b_folderName = true;
+                link2folder = "(https://github.com/GeeeHesso/Perpetuation/tree/master/" + yearString[yearSpin.getSelectedIndex()]+"/"+subjectFolder[subjectSpin.getSelectedIndex()]+"/"+ folderName+")";
             }
 
             //now copy file
@@ -314,7 +348,7 @@ public class Main {
             String rm_string2 = textKeyWord.getText();
             String rm_string3 = textLink.getText();
 
-            String to_write_1 = rm_string1+ "\n<!-- keywords: " + axisSpin.getSelectedItem().toString() +", " + rm_string2+ "-->\n<!-- link: " + rm_string3 + "-->";
+            String to_write_1 = rm_string1+ "\n\n<!-- keywords: " + axisFolder[axisSpin.getSelectedIndex()] +", " + rm_string2+ "-->\n\n<!-- link: " + rm_string3 + "-->";
 
             try {
                 Files.write(Paths.get(yearString[yearSpin.getSelectedIndex()]+File.separator+subjectFolder[subjectSpin.getSelectedIndex()]+File.separator+ folderName +File.separator + "README.md"), to_write_1.getBytes()); //THIS IS THE ONE TO USE TO WRITE!
@@ -335,7 +369,7 @@ public class Main {
 
                     if(!to_write_ref && line.length()>0 && line.charAt(0)=='*') {
 //                        System.out.println("WOW");
-                        to_write += textRef.getText() + "\n\n";
+                        to_write += "* " + textRef.getText() + link2folder + "\n\n";
                         to_write_ref = true;
                     }
                     to_write += line + "\n";
@@ -345,7 +379,7 @@ public class Main {
                 }
                 reader.close();
                 if(!to_write_ref)
-                    to_write += textRef.getText() + "\n\n";
+                    to_write += "* " + textRef.getText() + link2folder + "\n\n";
 
                 try {
                     Files.write(Paths.get(yearString[yearSpin.getSelectedIndex()]+File.separator+subjectFolder[subjectSpin.getSelectedIndex()]+File.separator+"README2.md"), to_write.getBytes());
@@ -363,6 +397,13 @@ public class Main {
                 File f2 = new File(yearString[yearSpin.getSelectedIndex()] + File.separator + subjectFolder[subjectSpin.getSelectedIndex()] + File.separator + "README.md");
                 f1.renameTo(f2);
             }
+
+            try {
+                TimeUnit.SECONDS.sleep(2);
+            } catch (InterruptedException e1) {
+                e1.printStackTrace();
+            }
+            System.exit(0);
 
         }
     }

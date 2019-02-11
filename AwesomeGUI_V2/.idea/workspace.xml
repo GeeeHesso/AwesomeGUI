@@ -9,8 +9,18 @@
     <list default="true" id="26fd368d-b455-4390-b593-97c39f408850" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/AwesomeGUI_V2_jar/AwesomeGUI_V2.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/AwesomeGUI_V2_jar/AwesomeGUI_V2.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AwesomeGUI_V2/Main$AbsCBListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AwesomeGUI_V2/Main$AbsCBListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AwesomeGUI_V2/Main$AxisSpinListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AwesomeGUI_V2/Main$AxisSpinListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AwesomeGUI_V2/Main$CheckBtnListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AwesomeGUI_V2/Main$CheckBtnListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AwesomeGUI_V2/Main$DoneBtnListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AwesomeGUI_V2/Main$DoneBtnListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AwesomeGUI_V2/Main$FileBtnListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AwesomeGUI_V2/Main$FileBtnListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AwesomeGUI_V2/Main$KWCBListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AwesomeGUI_V2/Main$KWCBListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AwesomeGUI_V2/Main$LinkCBListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AwesomeGUI_V2/Main$LinkCBListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AwesomeGUI_V2/Main$RefCBListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AwesomeGUI_V2/Main$RefCBListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AwesomeGUI_V2/Main$SubjectSpinListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AwesomeGUI_V2/Main$SubjectSpinListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AwesomeGUI_V2/Main$YearSpinListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AwesomeGUI_V2/Main$YearSpinListener.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/AwesomeGUI_V2/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AwesomeGUI_V2/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,11 +31,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="263">
-              <caret line="21" column="21" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="21" />
+            <state relative-caret-position="-110">
+              <caret line="350" column="49" selection-start-line="350" selection-start-column="49" selection-end-line="350" selection-end-column="49" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -33,7 +43,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.form">
           <provider selected="true" editor-type-id="ui-designer" />
         </entry>
@@ -54,6 +64,7 @@
       <find>mkdir</find>
       <find>copyFileUsingJava7Files</find>
       <find>b_file</find>
+      <find>print</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -62,16 +73,16 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/Main.form" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="65" />
-    <option name="y" value="24" />
-    <option name="width" value="1855" />
-    <option name="height" value="1056" />
+    <option name="x" value="64" />
+    <option name="y" value="-11" />
+    <option name="width" value="1857" />
+    <option name="height" value="1092" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -79,6 +90,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -100,13 +112,6 @@
             <path>
               <item name="AwesomeGUI_V2" type="b2602c69:ProjectViewProjectNode" />
               <item name="AwesomeGUI_V2" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
-              <item name="AwesomeGUI_V2_jar" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AwesomeGUI_V2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AwesomeGUI_V2" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -114,7 +119,6 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -123,7 +127,7 @@
     <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
     <property name="GenerateAntBuildDialog.outputFileNameProperty" value="awesomegui_v2" />
     <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH" value="282" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548839638022" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549900366108" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
@@ -169,10 +173,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
+    <frame x="64" y="-11" width="1857" height="1092" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16639027" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12050857" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -189,7 +193,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.3295099" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.3291536" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -201,18 +205,18 @@
     </layout>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/Main.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="21" column="21" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="21" />
+        <state relative-caret-position="-110">
+          <caret line="350" column="49" selection-start-line="350" selection-start-column="49" selection-end-line="350" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.form">
-      <provider selected="true" editor-type-id="ui-designer" />
     </entry>
   </component>
   <component name="masterDetails">
